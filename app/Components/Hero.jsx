@@ -12,14 +12,14 @@ const Hero = () => {
             <h2 className="text-[#0b3931] xl:text-[52px] text-5xl xs:text-4xl font-normal font-['Arial] leading-[54.79px] mt-7 ">Welcome to <br/> Pure Pharmaceuticals</h2>
             <p className="text-[#2f2f2f] text-base font-normal font-['Inter'] leading-normal mt-5 xl:w-[90%]">
               Welcome to Pure Pharmaceuticals, your trusted source for
-              high-quality pharmaceutical products in Kisad, Abu Dhabi. We are
+              high-quality pharmaceutical products in Kizad, Abu Dhabi. We are
               committed to excellence and customer satisfaction, ensuring all
               our products meet the highest standards of quality, safety, and
               efficacy. Whether you need over-the-counter medications,
               prescription drugs, or specialty pharmaceuticals, you can rely on
               us for effective solutions.
             </p>
-            <button className="flex gap-3 items-center mt-14 bg-[#0e493f] py-4 px-6 text-white text-base font-normal font-['Arial'] leading-[16.86px] ">Get Start <Image src={RightArrow} alt="Arrow"/></button>
+            <button className="flex gap-3 items-center mt-14 bg-[#0e493f] py-4 px-6 text-white text-base font-normal font-['Arial'] leading-[16.86px] mb-8">Get Start <Image src={RightArrow} alt="Arrow"/></button>
           </div>
           <div className="flex mt-10 md:mt-0 xs:pb-5">
             <Image src={HeroImg} alt="Company Img" />

@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <div className="xl:px-[90px] lg:px-10 px-5 xs:px-1 pt-10">
+    <div className="xl:px-[90px] lg:px-10 px-5 xs:px-1 pt-10 bg-[#ECF8F2]">
       <div className="flex justify-between items-center">
         <div>
           <Image src={Logo} alt="Logo" />
