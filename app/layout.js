@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Pure Pharmaceuticals",
-  description: "Created By M.Talha Rehman",
+  description: "Pure Pharma - Leading pharmaceutical manufacturer in UAE, Abu Dhabi, committed to delivering high-quality healthcare solutions.",
 };
 
 export default function RootLayout({ children }) {
