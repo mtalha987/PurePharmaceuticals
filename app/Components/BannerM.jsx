@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import BannerCut from "@/public/images/bannerCut.png";
+import BannerCut from "@/public/images/BannerCut.png";
 import ZLine from "@/public/images/Vector1ZLine.svg";
 
 const BannerM = () => {
