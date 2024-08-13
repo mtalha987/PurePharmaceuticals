@@ -7,7 +7,7 @@ const About = () => {
     <>
       <div className="flex flex-col lg:flex-row items-center  xl:px-[90px] lg:px-10 px-5 lg:mt-44 mt-14 gap-20">
         <div className="">
-          <Image src={AboutImg} alt="" />
+          <Image src={AboutImg} alt="About Image" />
         </div>
         <div className="lg:w-6/12 2xl:w-full lg:pt-24 pt-5">
           <button className="p-[10px] text-[#0E493F] text-base font-normal leading-[16.86px] font-['Arial'] border rounded-3xl border-[#0E493F]">
