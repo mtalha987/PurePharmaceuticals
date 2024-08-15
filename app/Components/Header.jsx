@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <>
       <div className={`pt-[20px] xl:px-[90px] lg:px-[40px] px-5 ${getHeaderColor()} `}>
-        <div className="hidden  md:flex flex-wrap justify-between text-neutral-dark-gray text-[13px] font-primary ">
+        <div className="hidden  lg:flex flex-wrap justify-between text-neutral-dark-gray text-[13px] font-primary ">
           <div className="leading-5 font-normal ">
             <span>Sample@gmail.com</span>
             <span> / </span>
@@ -39,7 +39,7 @@ const Header = () => {
             </span>
           </div>
         </div>
-        <div className="w-full h-[0px] opacity-40 border border-neutral-gray mt-2 mb-5 hidden md:block"></div>
+        <div className="w-full h-[0px] opacity-40 border border-neutral-gray mt-2 mb-5 hidden lg:block"></div>
 
         <nav className="flex items-center justify-between   ">
           <div>
@@ -47,7 +47,7 @@ const Header = () => {
             <Image src={Logo} alt="StomaFlex Logo" />
             </Link>
           </div>
-          <div className="hidden md:flex items-center">
+          <div className="hidden lg:flex items-center">
             <div className="xl:mr-[205px] lg:mr-[150px] sm:mr-10 mr-4 text-neutral-gray text-base font-normal font-primary leading-normal">
               <ul className="flex gap-8">
                 <li><Link href="/">Home</Link></li>
@@ -59,7 +59,7 @@ const Header = () => {
               Get this from Jurhy <Image src={RightArrow} alt="Right Arrow" />
             </div>
           </div>
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button onClick={toggleMenu} className="">
               {isOpen ? (
                 <Image src={MenuClose} alt="Menu Close Icon"  />
@@ -69,11 +69,11 @@ const Header = () => {
             </button>
           </div>
         </nav>
-        <div className="w-full h-[0px] opacity-40 border border-[#0000004D] md:hidden mt-5"></div>
+        <div className="w-full h-[0px] opacity-40 border border-[#0000004D] lg:hidden mt-5"></div>
         {/* Mobile Menu */}
         {isOpen && (
             
-          <div className="md:hidden bg-white flex items-center  flex-col ">
+          <div className={`lg:hidden  flex items-center  flex-col ${getHeaderColor()}`}>
             
             <ul className="flex items-center w-full flex-col gap-4 pt-4 text-black text-base font-normal font-secondary leading-tight">
               <li><Link href="/" onClick={handleLinkClick}>Home</Link></li>
@@ -81,9 +81,6 @@ const Header = () => {
 
               <li><Link href="/about" onClick={handleLinkClick}>About Us</Link></li>
               <div className="w-full h-[0px] opacity-40 border border-[#0000004D]  "></div>
-
-              <li><Link href="/product" onClick={handleLinkClick}>Product</Link></li>
-              <div className="w-full h-[0px] opacity-40 border border-[#0000004D] "></div>
 
               <li><Link href="/contact" onClick={handleLinkClick}>Contact Us</Link></li>
               <div className="w-full h-[0px] opacity-40 border border-[#0000004D]  "></div>

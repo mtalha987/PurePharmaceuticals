@@ -13,17 +13,17 @@ import ShopIcon from "@/public/images/shopIcon.svg"
 const Products = () => {
   return (
     <>
-      <div className="xl:px-[90px] lg:px-10 px-5 lg:mt-44 mt-14">
-        <div>
-          <button className="py-[10px] px-[18px] border border-[#0e493f] rounded-3xl text-[#0e493f] text-base font-normal font-['Arial'] leading-[16.86px]">
+      <div className="xl:px-[90px] lg:px-10 px-5 lg:mt-44 mt-14 ">
+        <div className="flex justify-start 2xl:justify-center">
+          <button className="py-[10px] px-[18px]  border border-[#0e493f] rounded-3xl text-[#0e493f] text-base font-normal font-['Arial'] leading-[16.86px]">
             Shop By Category
           </button>
         </div>
-        <h2 className="text-[#0e493f] text-[42px] font-normal font-['Arial'] leading-[44.25px] mt-4">
+        <h2 className="text-[#0e493f] text-[42px] font-normal font-['Arial'] leading-[44.25px] mt-4 2xl:text-center">
           Leading the Way to Better Health
         </h2>
         <div>
-          <div className="lg:mt-9 mt-5 flex gap-3 flex-wrap justify-start">
+          <div className="lg:mt-9 mt-5 flex gap-3 flex-wrap justify-start 2xl:justify-center">
             <div className='h-[35px] px-[15px] py-2.5 bg-[#f7f7f7] rounded-lg justify-center items-center gap-2.5 inline-flex text-[#6f6f6f] text-[13px] font-normal font-["Arial"]'>
               All Products
             </div>
