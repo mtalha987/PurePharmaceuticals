@@ -22,13 +22,14 @@ module.exports = {
       'light-black':"#1E1E1E",
       'pink':"#9E1F66",
       'copyRight':"#9F9F9F",
-
+      'light-green':"#E9F6F4",
+      'pgreen':"#0A352E",
+      'light-pink':"#F8F8F8",
     },
     fontFamily: {
       primary: ['Poppins', 'sans-serif'],
       secondary: ['Inter', 'serif'],
       arial: ['Arial', 'sans-serif'],
-      nohemi: ['Nohemi','serif'],
     },
     screens: {
       'sm': '576px',

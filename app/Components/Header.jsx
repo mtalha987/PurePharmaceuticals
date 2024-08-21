@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <>
       <div className={`pt-[20px] xl:px-[90px] lg:px-[40px] px-5 ${getHeaderColor()} `}>
-        <div className="hidden  lg:flex flex-wrap justify-between text-neutral-dark-gray text-[13px] font-primary ">
+        <div className="hidden 2xl:max-w-[1440px] 2xl:mx-auto lg:flex flex-wrap justify-between text-neutral-dark-gray text-[13px] font-primary ">
           <div className="leading-5 font-normal ">
             <span>Sample@gmail.com</span>
             <span> / </span>
@@ -39,9 +39,9 @@ const Header = () => {
             </span>
           </div>
         </div>
-        <div className="w-full h-[0px] opacity-40 border border-neutral-gray mt-2 mb-5 hidden lg:block"></div>
+        <div className="w-full 2xl:max-w-[1440px] 2xl:mx-auto h-[0px] opacity-40 border border-neutral-gray mt-2 mb-5 hidden lg:block"></div>
 
-        <nav className="flex items-center justify-between   ">
+        <nav className="flex items-center justify-between 2xl:max-w-[1440px] 2xl:mx-auto  ">
           <div>
             <Link href="/">
             <Image src={Logo} alt="StomaFlex Logo" />

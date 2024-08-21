@@ -7,7 +7,7 @@ import LinePrimary from "@/public/images/lineP.svg";
 const AboutUs = () => {
   return (
     <>
-      <div className="mt-32 xl:px-[90px] lg:px-[40px] px-5 flex flex-wrap justify-center xl:justify-normal ">
+      <div className="mt-32 xl:px-[90px] 2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0 lg:px-[40px] px-5 flex flex-wrap justify-center xl:justify-normal ">
         <div className="xl:w-[40%] ">
           <div className=" lg:w-[90%] text-neutral-gray text-xl font-semibold font-primary leading-[30px] flex gap-3 mt-10 ">
             <Image src={LinePrimary} alt="Line" className="" />

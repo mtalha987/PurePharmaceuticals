@@ -8,7 +8,7 @@ import MissionIcon from '@/public/images/missionIcon.svg'
 const Vision = () => {
   return (
     <>
-         <div className='  mt-16 xl:px-[90px] lg:px-[40px] px-5  flex flex-wrap xl:flex-nowrap justify-center lg:justify-normal'>
+         <div className='  mt-16 xl:px-[90px] lg:px-[40px] 2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0 px-5  flex flex-wrap xl:flex-nowrap justify-center lg:justify-normal'>
          <div className='lg:w-6/12 lg:relative '>
                 <Image src={VisionImg} className='mt-12 xl:ml-12 lg:mt-0'/>
                 <div className="w-[155px] h-[397px] bg-primary lg:absolute -z-10  hidden xl:block top-20" />

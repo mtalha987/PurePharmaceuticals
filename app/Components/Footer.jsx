@@ -5,8 +5,8 @@ import Link from 'next/link'
 const Footer = () => {
   return (
     <>
-    <div className='mt-44   lg:pt-16 pt-5 bg-[#FBFBFB]'>
-        <div className=' flex flex-col lg:flex-row gap-7  lg:justify-between  lg:mx-[90px] mx-5 flex-wrap lg:flex-nowrap'>
+    <div className='mt-44   lg:pt-16 pt-5 bg-[#FBFBFB] '>
+        <div className=' 2xl:max-w-[1440px] 2xl:mx-auto flex flex-col lg:flex-row gap-7  lg:justify-between  lg:mx-[90px] mx-5 flex-wrap lg:flex-nowrap'>
             <div className='lg:w-[70%]'>
                 <div><Image src={Logo} /></div>
                 <h2 className="xl:w-[407px] w-[80%] text-black text-base font-normal font-['Inter'] leading-normal mt-7">Pure Pharmaceuticals is committed to upholding the highest standards of quality and safety in the production of pharmaceuticals, from our base in Abu Dhabi to our global reach.</h2>
@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
         </div>
         <div className=' sm:h-16 bg-[#0B3931] lg:mt-20 mt-6'>
-            <div className='flex flex-wrap lg:flex-nowrap lg:mx-[90px] mx-3 justify-between py-5 text-white text-base font-normal font-["Inter"] leading-normal'>
+            <div className='2xl:max-w-[1440px] 2xl:mx-auto flex flex-wrap lg:flex-nowrap lg:mx-[90px] mx-3 justify-between py-5 text-white text-base font-normal font-["Inter"] leading-normal'>
             <h3>© Safecaretechnology. All Rights Reserved 2024</h3>
             <h4 className='xs:mt-3'>Terms & Conditions</h4>
             </div>

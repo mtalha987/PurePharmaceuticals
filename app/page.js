@@ -6,6 +6,7 @@ import About from "./Components/About";
 import Partners from "./Components/Partners";
 import WhyPure from "./Components/WhyPure";
 import Products from "./Components/Products";
+import PureCommitted from "./Components/PureCommitted";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Verticals/>
       <About/>
       <Products/>
+      <PureCommitted/>
       <WhyPure/>
       <Partners/>
     </>
