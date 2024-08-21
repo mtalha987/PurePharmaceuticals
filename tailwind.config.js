@@ -27,8 +27,8 @@ module.exports = {
       'light-pink':"#F8F8F8",
     },
     fontFamily: {
-      primary: ['Poppins', 'sans-serif'],
-      secondary: ['Inter', 'serif'],
+      primary:  ['var(--font-poppins)', 'sans-serif'],
+      secondary: ['var(--font-inter)', 'sans-serif'],
       arial: ['Arial', 'sans-serif'],
     },
     screens: {

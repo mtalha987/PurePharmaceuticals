@@ -1,9 +1,18 @@
-import { Inter } from "next/font/google";
+import { Inter, Poppins, Arial } from "next/font/google";
 import "./globals.css";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  weight: ['400', '500', '600', '700'], // Specify the weights you want
+});
+const poppins = Poppins({
+  subsets: ['latin'],
+  variable: '--font-poppins',
+  weight: ['400','500', '600'], // Specify the weights you want
+});
 
 export const metadata = {
   title: "Pure Pharmaceuticals",
@@ -33,7 +42,7 @@ export default function RootLayout({ children }) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${poppins.variable}`}>
         <Header />
         {children}
         <Footer />

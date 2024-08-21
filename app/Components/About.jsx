@@ -16,7 +16,7 @@ const About = () => {
           <h2 className="text-[#0E493F] font-normal font-arial leading-[44.25px] text-[42px] mt-4">
             Raising Pharmaceutical Standards from Abu Dhabi to Worldwide Excellence
           </h2>
-          <p className="text-black text-base font-normal font-['Inter'] leading-normal mt-4">
+          <p className="text-black text-base font-normal font-secondary leading-normal mt-4">
             Pure Pharmaceuticals is committed to upholding the highest standards
             of quality and safety in the production of pharmaceuticals, from our
             base in Abu Dhabi to our global reach. Our state-of-the-art

@@ -10,11 +10,11 @@ const Products = () => {
     <>
       <div className="xl:px-[90px] lg:px-10 px-5 lg:mt-44 mt-14 2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0">
         <div className="flex justify-start ">
-          <button className="py-[10px] px-[18px]  border border-[#0e493f] rounded-3xl text-[#0e493f] text-base font-normal font-['Arial'] leading-[16.86px]">
+          <button className="py-[10px] px-[18px]  border border-[#0e493f] rounded-3xl text-[#0e493f] text-base font-normal font-arial leading-[16.86px]">
             Shop By Category
           </button>
         </div>
-        <h2 className="text-[#0e493f] text-[42px] font-normal font-['Arial'] leading-[44.25px] mt-4">
+        <h2 className="text-[#0e493f] text-[42px] font-normal font-arial leading-[44.25px] mt-4">
           Leading the Way to Better Health
         </h2>
         <div className="grid gap-5 lg:grid-cols-4 sm:grid-cols-2 mt-12">
