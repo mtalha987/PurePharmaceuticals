@@ -29,21 +29,21 @@ const Products = () => {
             <div>
               <Image src={Product2} alt="Products" />
             </div>
-            <h2 className="text-2xl font-normal font-arial leading-relaxed text-pgreen mt-10">Solid Dosage Forms</h2>
+            <h2 className="text-2xl font-normal font-arial leading-relaxed text-pgreen mt-10">Antiseptic Solution</h2>
             <p className="mt-1 text-base font-normal font-secondary leading-[16.86px]">Purepharma Product</p>
           </div>
           <div className="bg-light-green flex flex-col justify-center items-center min-w-[30%] h-[330px]">
             <div>
               <Image src={Product3} alt="Products" />
             </div>
-            <h2 className="text-2xl font-normal font-arial leading-relaxed text-pgreen mt-10">Solid Dosage Forms</h2>
+            <h2 className="text-2xl font-normal font-arial leading-relaxed text-pgreen mt-10">Cream & Ointments</h2>
             <p className="mt-1 text-base font-normal font-secondary leading-[16.86px]">Purepharma Product</p>
           </div>
           <div className="bg-light-green flex flex-col justify-center items-center min-w-[30%] h-[330px]">
             <div>
               <Image src={Product4} alt="Products" />
             </div>
-            <h2 className="text-2xl font-normal font-arial leading-relaxed text-pgreen mt-10">Solid Dosage Forms</h2>
+            <h2 className="text-2xl font-normal font-arial leading-relaxed text-pgreen mt-10">Oral Liquid</h2>
             <p className="mt-1 text-base font-normal font-secondary leading-[16.86px]">Purepharma Product</p>
           </div>
           
