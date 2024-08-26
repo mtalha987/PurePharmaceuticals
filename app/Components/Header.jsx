@@ -7,6 +7,8 @@ import MenuClose from "@/public/images/menuClose.svg";
 import RightArrow from "@/public/images/rightArrow.svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { CiCirclePlus } from "react-icons/ci";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 
 const Header = () => {
   const pathname = usePathname();
@@ -53,6 +55,12 @@ const Header = () => {
     setAreaDropdown(false);
   };
 
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   return (
     <>
       <div
@@ -79,8 +87,8 @@ const Header = () => {
             </Link>
           </div>
           <div className="hidden lg:flex items-center">
-            <div className="xl:mr-[150px] lg:mr-[10px] sm:mr-10 mr-4 text-neutral-gray text-base font-normal font-primary leading-normal">
-              <ul className="flex gap-8">
+            <div className="xl:mr-[140px] lg:mr-[40px] sm:mr-10 mr-4 text-neutral-gray text-base font-normal font-primary leading-normal">
+              <ul className="flex gap-5">
                 <li>
                   <Link href="/">Home</Link>
                 </li>
@@ -108,7 +116,7 @@ const Header = () => {
                   </Link>
                   {aboutDropdown && (
                     <ul
-                      className={`absolute w-[160px] left-0 pt-6  rounded shadow-lg ${getHeaderColor()}`}
+                      className={`absolute w-[160px] left-0 pt-6 z-20  rounded shadow-lg ${getHeaderColor()}`}
                     >
                       <li className="px-3 py-2 hover:bg-primary hover:text-white ">
                         <Link href="/about/company">Company</Link>
@@ -145,7 +153,7 @@ const Header = () => {
                     </svg>
                   </Link>
                   {contactDropdown && (
-                    <ul className="absolute w-[200px] left-0 pt-6   rounded shadow-lg">
+                    <ul className="absolute w-[200px] left-0 pt-6 z-20  rounded shadow-lg">
                       <li
                         className={`flex items-center relative px-3 py-2 ${getHeaderColor()} hover:bg-primary hover:text-white`}
                         onMouseEnter={handleAreaHover}
@@ -153,19 +161,19 @@ const Header = () => {
                       >
                         Oral Solid Dosage
                         <svg
-                      className="h-5 w-5 ml-2"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
+                          className="h-5 w-5 ml-2"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
                         {areaDropdown && (
                           <ul
                             className={`absolute left-full -top-2 mt-2 rounded shadow-lg text-black ${getHeaderColor()}`}
@@ -220,23 +228,136 @@ const Header = () => {
                   Home
                 </Link>
               </li>
+              <div className=" w-full h-[0px] opacity-40 border border-[#0000004D] "></div>
+
+              <li className="relative flex flex-col items-center w-full">
+                <div className="flex justify-center items-center">
+                  <Link
+                    href="/about"
+                    className="flex items-center"
+                    onClick={handleLinkClick}
+                  >
+                    About Us
+                  </Link>
+
+                  <svg
+                    onClick={() => toggleAccordion(0)}
+                    className="h-5 w-5 ml-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+                {activeIndex === 0 && (
+                  <div className="w-full">
+                    <ul
+                      className={`w-full flex flex-col items-center justify-center  ${getHeaderColor()}`}
+                    >
+                      <div className="w-full h-[0px] opacity-40  border-2 mt-2 border-[#0000004D] "></div>
+
+                      <li className="px-3 py-2 hover:bg-primary hover:text-white ">
+                        <Link href="/about/company">Company</Link>
+                      </li>
+                      <div className="w-full h-[0px] opacity-40 border border-[#0000004D] "></div>
+
+                      <li className="px-3 py-2 hover:bg-primary hover:text-white ">
+                        <Link href="/about/news">News</Link>
+                      </li>
+                      <div className="w-full h-[0px] opacity-40 border border-[#0000004D] "></div>
+
+                      <li className="px-3 py-2 hover:bg-primary hover:text-white ">
+                        <Link href="/about/event">Event</Link>
+                      </li>
+                      <div className="w-full h-[0px] opacity-40  border-2 mt-2 border-[#0000004D] "></div>
+                    </ul>
+                  </div>
+                )}
+              </li>
               <div className="w-full h-[0px] opacity-40 border border-[#0000004D] "></div>
 
-              <li className="relative">
-                <Link href="/about" onClick={handleLinkClick}>
-                  About Us
-                </Link>
-                <ul className="mt-2 bg-white border border-gray-300 rounded shadow-lg">
-                  <li className="px-4 py-2 hover:bg-gray-100">
-                    <Link href="/about/company">Company</Link>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-100">
-                    <Link href="/about/news">News</Link>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-100">
-                    <Link href="/about/event">Event</Link>
-                  </li>
-                </ul>
+              <li className="relative flex flex-col items-center w-full">
+                <div className="flex items-center justify-center w-full">
+                  <Link
+                    href="/contact"
+                    className="flex items-center"
+                    onClick={handleLinkClick}
+                  >
+                    Products
+                  </Link>
+                  <svg
+                    onClick={() => toggleAccordion(1)}
+                    className="h-5 w-5 ml-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+                {activeIndex === 1 && (
+                  <div className="w-full">
+                    <ul className="  ">
+                    <div className="w-full h-[0px] opacity-40  border-2 mt-2 border-[#0000004D] "></div>
+
+                      <li
+                        className={`flex flex-col items-center justify-center  px-3 py-2 ${getHeaderColor()}`}
+                        onMouseEnter={handleAreaHover}
+                        onMouseLeave={handleAreaLeave}
+                      >
+                        <div className="flex justify-center items-center">
+                        Oral Solid Dosage
+                        <svg
+                          className="h-5 w-5 ml-2"
+                          
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                        </div>
+                        {areaDropdown && (
+                          <ul
+                            className={` mt-2 flex flex-col items-center justify-center  text-black ${getHeaderColor()}`}
+                          >
+                            <li className="px-3 py-2">
+                              Antihypertensives
+                            </li>
+                            <li className="px-3 py-2">
+                              Antihistamines
+                            </li>
+                            <li className="px-3 py-2">
+                              Erectile Dysfunction
+                            </li>
+                            <li className="px-3 py-2">
+                              Lipid Lowering Agents
+                            </li>
+                          </ul>
+                        )}
+                      </li>
+                    </ul>
+                  </div>
+                )}
               </li>
               <div className="w-full h-[0px] opacity-40 border border-[#0000004D] "></div>
 
@@ -244,16 +365,6 @@ const Header = () => {
                 <Link href="/contact" onClick={handleLinkClick}>
                   Contact Us
                 </Link>
-                <ul className="mt-2 bg-white border border-gray-300 rounded shadow-lg">
-                  <li className="px-4 py-2 hover:bg-gray-100">Location</li>
-                  <li className="relative px-4 py-2 hover:bg-gray-100">
-                    Area
-                    <ul className="mt-2 bg-white border border-gray-300 rounded shadow-lg">
-                      <li className="px-4 py-2 hover:bg-gray-100">Pakistan</li>
-                      <li className="px-4 py-2 hover:bg-gray-100">India</li>
-                    </ul>
-                  </li>
-                </ul>
               </li>
               <div className="w-full h-[0px] opacity-40 border border-[#0000004D] "></div>
             </ul>
