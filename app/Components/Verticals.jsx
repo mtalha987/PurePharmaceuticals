@@ -13,7 +13,7 @@ import Marquee from "react-fast-marquee";
 const Verticals = () => {
   return (
     <>
-      <div className="mt-24 px-14 xs:px-5 2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0">
+      <div className="mt-24 px-14 xs:px-5 2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0 mb-40">
         <h2 className="text-black text-2xl font-normal font-['Arial'] leading-relaxed text-center">
           Our Verticals
         </h2>

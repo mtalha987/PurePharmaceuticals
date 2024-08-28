@@ -3,11 +3,12 @@ import ContactInformation from '../Components/contact/ContactInformation'
 import PageNameBanner from '../Components/PageNameBanner'
 import AboutHeroImg from '@/public/images/aboutHero.svg';
 import TouchUs from '../Components/contact/TouchUs'
+import Hero from '../Components/contact/Hero';
 
 const page = () => {
   return (
     <>
-      <PageNameBanner title="Contact Us" image={AboutHeroImg}/>
+      <Hero/>
       <TouchUs/>
       <ContactInformation/>
     </>

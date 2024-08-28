@@ -14,7 +14,7 @@ const ContactInformation = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore{" "}
       </p>
-      <div className="flex flex-wrap gap-5 justify-center">
+      <div className="flex flex-wrap gap-5 justify-center 2xl:max-w-[1440px] 2xl:mx-auto">
         <CardContact image={PhoneIcon} title="Phone:" info="(12+) 123 3456"/>
         <CardContact image={EmailIcon} title="Email:" info="support@yoursite.com"/>
         <CardContact image={LocationIcon} title="Location:" info="121th Haidezign st, Melbourne, AUS 12313"/>

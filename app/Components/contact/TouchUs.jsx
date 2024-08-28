@@ -3,7 +3,7 @@ import React from "react";
 const TouchUs = () => {
   return (
     <>
-      <div className="xl:px-[90px] 2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0 lg:px-[40px] px-5 flex sm:mt-20 xs:mt-10 bg-white lg:justify-between flex-wrap justify-center  ">
+      <div className="-mt-36 xl:px-[90px] 2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0 lg:px-[40px] px-5 flex  bg-white lg:justify-between flex-wrap justify-center  ">
         <div className="lg:py-20 py-10 lg:pl-14 xs:pl-3 pl-5 shadow-lg lg:w-6/12">
           <h2 className="text-black text-[32px] font-normal font-nohemi">
             Get In Touch With Us

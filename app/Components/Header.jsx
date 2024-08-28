@@ -7,14 +7,13 @@ import MenuClose from "@/public/images/menuClose.svg";
 import RightArrow from "@/public/images/rightArrow.svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { CiCirclePlus } from "react-icons/ci";
-import { FaAngleDown, FaAngleUp } from "react-icons/fa";
+
 
 const Header = () => {
   const pathname = usePathname();
 
   const getHeaderColor = () => {
-    if (pathname === "/") return "bg-[#ECF8F2]";
+    if (pathname === "/" || pathname === "/contact" ) return "bg-[#ECF8F2]";
     return "bg-white";
   };
 
@@ -119,10 +118,10 @@ const Header = () => {
                       className={`absolute w-[160px] left-0 pt-6 z-20  rounded shadow-lg ${getHeaderColor()}`}
                     >
                       <li className="px-3 py-2 hover:bg-primary hover:text-white ">
-                        <Link href="/about/company">Company</Link>
+                        <Link href="/about/company">Company Profile</Link>
                       </li>
                       <li className="px-3 py-2 hover:bg-primary hover:text-white ">
-                        <Link href="/about/news">News</Link>
+                        <Link href="/about/corporate">Corporate</Link>
                       </li>
                       <li className="px-3 py-2 hover:bg-primary hover:text-white ">
                         <Link href="/about/event">Event</Link>
@@ -195,6 +194,12 @@ const Header = () => {
                       </li>
                     </ul>
                   )}
+                </li>
+                <li>
+                  <Link href="/contact">News & Events</Link>
+                </li>
+                <li>
+                  <Link href="/contact">Careers</Link>
                 </li>
                 <li>
                   <Link href="/contact">Contact Us</Link>
