@@ -1,13 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import CorporatePatners from "@/app/Components/about/CorporatePatners";
-import Cmap from "@/public/images/cmap.svg";
-import Banner from "@/public/images/corporateBanner.svg";
-import PageNameBanner from "@/app/Components/PageNameBanner";
+import PageNameBanner from "../Components/PageNameBanner";
+import Banner from "@/public/images/careersBanner.svg";
+import BreadCrumbs from "../Components/BreadCrumbs";
+
 const page = () => {
   return (
     <>
       <PageNameBanner image={Banner} title="" />
+      <BreadCrumbs />
+
       <div className="flex flex-wrap md:flex-nowrap  2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0  md:justify-between justify-center xl:px-[90px] lg:px-[40px] px-5 gap-5">
         <div className=" md:w-[26%] xl:w-[350px] w-full  mt-14   ">
           <div className="xl:w-[350px] pb-3 border-black/40 shadow">
@@ -46,24 +48,19 @@ const page = () => {
         </div>
         <div className="xl:w-[70%] md:w-[74%] w-full mt-16">
           <div>
-            <h2 className="text-primary text-[32px] font-normal font-arial leading-[38.40px]">
-              Clients & Partners
-            </h2>
-            <CorporatePatners />
-
-            <h2 className="text-primary text-[32px] font-normal font-arial leading-[38.40px] mt-20">
-              Export
-            </h2>
-            <p className="mt-5 text-base font-normal font-secondary leading-normal text-[#1e1e1e] ">
-              We are rapidly growing in the region to improve people’s quality
-              of life with top quality products. Markets that we are serving or
-              will be served soon are Qatar, Iraq, Bahrain, Jordan and Yemen.
-              The list is rapidly changing so please contact us for more
-              details.
+            <h2 className="text-primary text-[32px] font-normal font-arial leading-[38.40px] ">Careers</h2>
+            <p className="mt-5 text-base font-normal font-secondary leading-normal text-[#1e1e1e]">
+              Whether you are still at university or looking for a new
+              professional opportunity, we at QLife Pharma may be able to meet
+              your aspirations. We are continuously looking for talented and
+              committed individuals that can further improve our organization.<br/><br/>
+              If you would like to be considered for a job opening, please send
+              your application and CV, for the attention to hr@purepharma.com. We will respond directly, detailing when we
+              will have reviewed your application.{" "}
             </p>
-            <div className="mt-10 w-full">
-              <Image src={Cmap} alt="Company" className="w-full mt-10" />
-            </div>
+            <p className="mt-5 text-base font-normal font-secondary leading-normal text-[#1e1e1e]">If you are a university student looking for an internship, please let us know the duration, as well as your subject and level (BSc, MSc or PhD).</p>
+          
+            <h2 className="text-primary text-[32px] font-normal font-arial leading-[38.40px] mt-16">Company Key values are:</h2>
           </div>
         </div>
       </div>

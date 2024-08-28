@@ -4,16 +4,15 @@ import Image from "next/image";
 import Logo from "@/public/images/logo.svg";
 import MenuOpen from "@/public/images/menuOpen.svg";
 import MenuClose from "@/public/images/menuClose.svg";
-import RightArrow from "@/public/images/rightArrow.svg";
+import RightArrow from "@/public/images/rightArrowGreen.svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
 
 const Header = () => {
   const pathname = usePathname();
 
   const getHeaderColor = () => {
-    if (pathname === "/" || pathname === "/contact" ) return "bg-[#ECF8F2]";
+    if (pathname === "/" || pathname === "/contact") return "bg-[#ECF8F2]";
     return "bg-white";
   };
 
@@ -123,9 +122,6 @@ const Header = () => {
                       <li className="px-3 py-2 hover:bg-primary hover:text-white ">
                         <Link href="/about/corporate">Corporate</Link>
                       </li>
-                      <li className="px-3 py-2 hover:bg-primary hover:text-white ">
-                        <Link href="/about/event">Event</Link>
-                      </li>
                     </ul>
                   )}
                 </li>
@@ -196,18 +192,18 @@ const Header = () => {
                   )}
                 </li>
                 <li>
-                  <Link href="/contact">News & Events</Link>
+                  <Link href="/news">News & Events</Link>
                 </li>
                 <li>
-                  <Link href="/contact">Careers</Link>
+                  <Link href="/careers">Careers</Link>
                 </li>
                 <li>
                   <Link href="/contact">Contact Us</Link>
                 </li>
               </ul>
             </div>
-            <div className="px-[25px] py-3 bg-primary justify-center items-center gap-4 inline-flex text-white text-base font-medium font-primary">
-              Get this from Jurhy <Image src={RightArrow} alt="Right Arrow" />
+            <div className="px-[25px] py-3 text-primary justify-center items-center gap-4 inline-flex border border-primary rounded-lg text-base font-medium font-primary">
+              Shop Now <Image src={RightArrow} alt="Right Arrow" />
             </div>
           </div>
           <div className="lg:hidden">
@@ -316,7 +312,7 @@ const Header = () => {
                 {activeIndex === 1 && (
                   <div className="w-full">
                     <ul className="  ">
-                    <div className="w-full h-[0px] opacity-40  border-2 mt-2 border-[#0000004D] "></div>
+                      <div className="w-full h-[0px] opacity-40  border-2 mt-2 border-[#0000004D] "></div>
 
                       <li
                         className={`flex flex-col items-center justify-center  px-3 py-2 ${getHeaderColor()}`}
@@ -324,39 +320,30 @@ const Header = () => {
                         onMouseLeave={handleAreaLeave}
                       >
                         <div className="flex justify-center items-center">
-                        Oral Solid Dosage
-                        <svg
-                          className="h-5 w-5 ml-2"
-                          
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
+                          Oral Solid Dosage
+                          <svg
+                            className="h-5 w-5 ml-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
                         </div>
                         {areaDropdown && (
                           <ul
                             className={` mt-2 flex flex-col items-center justify-center  text-black ${getHeaderColor()}`}
                           >
-                            <li className="px-3 py-2">
-                              Antihypertensives
-                            </li>
-                            <li className="px-3 py-2">
-                              Antihistamines
-                            </li>
-                            <li className="px-3 py-2">
-                              Erectile Dysfunction
-                            </li>
-                            <li className="px-3 py-2">
-                              Lipid Lowering Agents
-                            </li>
+                            <li className="px-3 py-2">Antihypertensives</li>
+                            <li className="px-3 py-2">Antihistamines</li>
+                            <li className="px-3 py-2">Erectile Dysfunction</li>
+                            <li className="px-3 py-2">Lipid Lowering Agents</li>
                           </ul>
                         )}
                       </li>
