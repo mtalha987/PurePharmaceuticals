@@ -65,7 +65,7 @@ const Header = () => {
         className={`pt-[20px] xl:px-[90px] lg:px-[40px] px-5 ${getHeaderColor()} `}
       >
         {/* The rest of your header code here */}
-        
+
         <div className="hidden 2xl:max-w-[1440px] 2xl:mx-auto lg:flex flex-wrap justify-between text-neutral-dark-gray text-[13px] font-primary ">
           <div className="leading-5 font-normal ">
             <span>Sample@gmail.com</span>
@@ -88,16 +88,30 @@ const Header = () => {
           </div>
           <div className="hidden lg:flex items-center">
             <div className="xl:mr-[140px] lg:mr-[40px] sm:mr-10 mr-4 text-neutral-gray text-base font-normal font-primary leading-normal">
-              <ul className="flex gap-5">
+              <ul className="flex gap-9">
                 <li>
-                  <Link href="/"  className={pathname === '/' ? 'text-primary font-bold' : ''}>Home</Link>
+                  <Link
+                    href="/"
+                    className={pathname === "/" ? "text-primary font-bold" : ""}
+                  >
+                    Home
+                  </Link>
                 </li>
                 <li
                   onMouseEnter={handleAboutHover}
                   onMouseLeave={handleAboutLeave}
                   className="relative"
                 >
-                  <Link href="/about" className={`flex items-center ${pathname === '/about' || pathname === '/about/company' || pathname === '/about/corporate' ? 'text-primary font-bold' : ''}`}>
+                  <Link
+                    href="#"
+                    className={`flex items-center ${
+                      pathname === "/about" ||
+                      pathname === "/about/company" ||
+                      pathname === "/about/corporate"
+                        ? "text-primary font-bold"
+                        : ""
+                    }`}
+                  >
                     About Us{" "}
                     <svg
                       className="h-5 w-5 ml-2"
@@ -118,6 +132,9 @@ const Header = () => {
                     <ul
                       className={`absolute w-[160px] left-0 pt-6 z-20  rounded shadow-lg ${getHeaderColor()}`}
                     >
+                      <li className="px-3 py-2 hover:bg-primary hover:text-white ">
+                        <Link href="/about">About Us</Link>
+                      </li>
                       <li className="px-3 py-2 hover:bg-primary hover:text-white ">
                         <Link href="/about/company">Company Profile</Link>
                       </li>
@@ -173,7 +190,7 @@ const Header = () => {
                         </svg>
                         {areaDropdown && (
                           <ul
-                            className={`absolute left-full -top-2 mt-2 rounded shadow-lg text-black ${getHeaderColor()}`}
+                            className={`absolute left-full -top-2 mt-2 rounded lg:w-[200px] shadow-lg text-black ${getHeaderColor()}`}
                           >
                             <li className="px-3 py-2 hover:bg-primary hover:text-white">
                               Antihypertensives
@@ -187,6 +204,15 @@ const Header = () => {
                             <li className="px-3 py-2 hover:bg-primary hover:text-white">
                               Lipid Lowering Agents
                             </li>
+                            <li className="px-3 py-2 hover:bg-primary hover:text-white">
+                              Antibiotics
+                            </li>
+                            <li className="px-3 py-2 hover:bg-primary hover:text-white">
+                              Analgesics
+                            </li>
+                            <li className="px-3 py-2 hover:bg-primary hover:text-white">
+                              Anti-Emetics
+                            </li>
                           </ul>
                         )}
                       </li>
@@ -194,13 +220,34 @@ const Header = () => {
                   )}
                 </li>
                 <li>
-                  <Link href="/news" className={pathname === '/news' ? 'text-primary font-bold' : ''}>News & Events</Link>
+                  <Link
+                    href="/news"
+                    className={
+                      pathname === "/news" ? "text-primary font-bold" : ""
+                    }
+                  >
+                    News & Events
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/careers" className={pathname === '/careers' ? 'text-primary font-bold' : ''}>Careers</Link>
+                  <Link
+                    href="/careers"
+                    className={
+                      pathname === "/careers" ? "text-primary font-bold" : ""
+                    }
+                  >
+                    Careers
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className={pathname === '/contact' ? 'text-primary font-bold' : ''}>Contact Us</Link>
+                  <Link
+                    href="/contact"
+                    className={
+                      pathname === "/contact" ? "text-primary font-bold" : ""
+                    }
+                  >
+                    Contact Us
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -266,17 +313,23 @@ const Header = () => {
                       <div className="w-full h-[0px] opacity-40  border-2 mt-2 border-[#0000004D] "></div>
 
                       <li className="px-3 py-2 hover:bg-primary hover:text-white ">
-                        <Link href="/about/company" onClick={handleLinkClick}>Company</Link>
+                        <Link href="/about/company" onClick={handleLinkClick}>
+                          Company
+                        </Link>
                       </li>
                       <div className="w-full h-[0px] opacity-40 border border-[#0000004D] "></div>
 
                       <li className="px-3 py-2 hover:bg-primary hover:text-white ">
-                        <Link href="/about/news" onClick={handleLinkClick}>News</Link>
+                        <Link href="/about/news" onClick={handleLinkClick}>
+                          News
+                        </Link>
                       </li>
                       <div className="w-full h-[0px] opacity-40 border border-[#0000004D] "></div>
 
                       <li className="px-3 py-2 hover:bg-primary hover:text-white ">
-                        <Link href="/about/event" onClick={handleLinkClick}>Event</Link>
+                        <Link href="/about/event" onClick={handleLinkClick}>
+                          Event
+                        </Link>
                       </li>
                       <div className="w-full h-[0px] opacity-40  border-2 mt-2 border-[#0000004D] "></div>
                     </ul>
@@ -341,10 +394,18 @@ const Header = () => {
                           <ul
                             className={` mt-2 flex flex-col items-center justify-center  text-black ${getHeaderColor()}`}
                           >
-                            <li className="px-3 py-2" onClick={handleLinkClick}>Antihypertensives</li>
-                            <li className="px-3 py-2" onClick={handleLinkClick}>Antihistamines</li>
-                            <li className="px-3 py-2" onClick={handleLinkClick}>Erectile Dysfunction</li>
-                            <li className="px-3 py-2" onClick={handleLinkClick}>Lipid Lowering Agents</li>
+                            <li className="px-3 py-2" onClick={handleLinkClick}>
+                              Antihypertensives
+                            </li>
+                            <li className="px-3 py-2" onClick={handleLinkClick}>
+                              Antihistamines
+                            </li>
+                            <li className="px-3 py-2" onClick={handleLinkClick}>
+                              Erectile Dysfunction
+                            </li>
+                            <li className="px-3 py-2" onClick={handleLinkClick}>
+                              Lipid Lowering Agents
+                            </li>
                           </ul>
                         )}
                       </li>
