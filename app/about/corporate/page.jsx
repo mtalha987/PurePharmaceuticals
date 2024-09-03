@@ -11,7 +11,7 @@ const page = () => {
       <PageNameBanner image={Banner} title="" />
       <BreadCrumbs/>
       <div className="flex flex-wrap md:flex-nowrap  2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0  md:justify-between justify-center xl:px-[90px] lg:px-[40px] px-5 gap-5">
-        <div className=" md:w-[26%] xl:w-[350px] w-full  mt-14   ">
+        <div className=" md:w-[26%] xl:w-[350px] w-full  mt-14 hidden md:block  ">
           <div className="xl:w-[350px] pb-3 border-black/40 shadow">
             <form className="flex mb-3">
               <input

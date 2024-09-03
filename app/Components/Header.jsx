@@ -276,7 +276,7 @@ const Header = () => {
               <li className="relative flex flex-col items-center w-full">
                 <div className="flex justify-center items-center">
                   <Link
-                    href="/about"
+                    href="#"
                     className="flex items-center"
                     onClick={handleLinkClick}
                   >
@@ -307,23 +307,16 @@ const Header = () => {
 
                       <li className="px-3 py-2 hover:bg-primary hover:text-white ">
                         <Link href="/about/company" onClick={handleLinkClick}>
-                          Company
+                        Company Profile
                         </Link>
                       </li>
-                      <div className="w-full h-[0px] opacity-40 border border-[#0000004D] "></div>
-
                       <li className="px-3 py-2 hover:bg-primary hover:text-white ">
-                        <Link href="/about/news" onClick={handleLinkClick}>
-                          News
+                        <Link href="/about/corporate" onClick={handleLinkClick}>
+                        Corporate
                         </Link>
                       </li>
-                      <div className="w-full h-[0px] opacity-40 border border-[#0000004D] "></div>
 
-                      <li className="px-3 py-2 hover:bg-primary hover:text-white ">
-                        <Link href="/about/event" onClick={handleLinkClick}>
-                          Event
-                        </Link>
-                      </li>
+                   
                       <div className="w-full h-[0px] opacity-40  border-2 mt-2 border-[#0000004D] "></div>
                     </ul>
                   </div>
