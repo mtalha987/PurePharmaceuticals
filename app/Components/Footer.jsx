@@ -8,7 +8,7 @@ const Footer = () => {
     <div className='mt-44   lg:pt-16 pt-5 bg-[#FBFBFB] '>
         <div className=' 2xl:max-w-[1440px] 2xl:mx-auto flex flex-col lg:flex-row gap-7  lg:justify-between  xl:mx-[90px] lg:mx-[40px] mx-5 flex-wrap lg:flex-nowrap'>
             <div className='lg:w-[70%]'>
-                <div><Image src={Logo} /></div>
+                <div><Image src={Logo} alt='Logo' /></div>
                 <h2 className="xl:w-[407px] w-[80%] text-black text-base font-normal font-secondary leading-normal mt-7">Pure Pharmaceuticals is committed to upholding the highest standards of quality and safety in the production of pharmaceuticals, from our base in Abu Dhabi to our global reach.</h2>
             </div>
             <div className='lg:w-[50%]'>

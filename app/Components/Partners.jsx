@@ -19,7 +19,7 @@ const Partners = () => {
         </h2>
         <div className="mt-16 flex flex-wrap justify-center">
           <div className="w-[400px] h-[150px] flex justify-center items-center xl:border-r xl:border-[#c4c4c4]">
-            <Image src={Partner1} alt="Partners" className="bg-transparent" />
+            <Image src={Partner1} alt="Partners" />
           </div>
           <div className="w-[400px] h-[150px] flex justify-center items-center xl:border-r xl:border-[#c4c4c4]">
             <Image src={Partner2} alt="Partners" />

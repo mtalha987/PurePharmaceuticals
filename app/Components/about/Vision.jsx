@@ -10,14 +10,14 @@ const Vision = () => {
     <>
          <div className='  mt-16 xl:px-[90px] lg:px-[40px] 2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0 px-5  flex flex-wrap xl:flex-nowrap justify-center lg:justify-normal'>
          <div className='lg:w-6/12 lg:relative '>
-                <Image src={VisionImg} className='mt-12 xl:ml-12 lg:mt-0'/>
+                <Image src={VisionImg} alt='Vision' className='mt-12 xl:ml-12 lg:mt-0'/>
                 <div className="w-[155px] h-[397px] bg-primary lg:absolute -z-10  hidden xl:block top-20" />
             </div>
             {/* Section 2 */}
             <div className='lg:w-6/12 mx-4 md:mx-0 '>
                 <div className='mt-28'>
                 <h2 className="text-primary text-[42px] font-normal font-nohemi xs:text-center">Our Vision and Mission</h2>
-                    <Image src={Vector} className='sm:ml-48 xs:ml-10' />
+                    <Image src={Vector} alt='Arrow' className='sm:ml-48 xs:ml-10' />
                 </div>
                 <div className='xs:mr-2'>
                     <div>

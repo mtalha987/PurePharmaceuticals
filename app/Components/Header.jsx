@@ -11,10 +11,7 @@ import { usePathname } from "next/navigation";
 const Header = () => {
   const pathname = usePathname();
 
-  const getHeaderColor = () => {
-    if (pathname === "/" || pathname === "/contact") return "bg-[#ECF8F2]";
-    return "bg-white";
-  };
+ 
 
   const [isOpen, setIsOpen] = useState(false);
   const [aboutDropdown, setAboutDropdown] = useState(false);
@@ -62,7 +59,7 @@ const Header = () => {
   return (
     <>
       <div
-        className={`pt-[20px] xl:px-[90px] lg:px-[40px] px-5 ${getHeaderColor()} `}
+        className={`pt-[20px] xl:px-[90px] lg:px-[40px] px-5 `}
       >
         <div className="hidden 2xl:max-w-[1440px] 2xl:mx-auto lg:flex flex-wrap justify-between text-neutral-dark-gray text-[13px] font-primary ">
           <div className="leading-5 font-normal ">
@@ -128,16 +125,14 @@ const Header = () => {
                   </Link>
                   {aboutDropdown && (
                     <ul
-                      className={`absolute w-[160px] left-0 pt-6 z-20  rounded shadow-lg ${getHeaderColor()}`}
+                      className={`absolute w-[160px] left-0 pt-6 z-20  rounded shadow-lg bg-white `}
                     >
-                      <li className="px-3 py-2 hover:bg-primary hover:text-white ">
-                        <Link href="/about">About Us</Link>
+                     
+                      <li className=" hover:bg-primary hover:text-white ">
+                        <Link href="/about/company" className="block px-3 py-2">Company Profile</Link>
                       </li>
-                      <li className="px-3 py-2 hover:bg-primary hover:text-white ">
-                        <Link href="/about/company">Company Profile</Link>
-                      </li>
-                      <li className="px-3 py-2 hover:bg-primary hover:text-white ">
-                        <Link href="/about/corporate">Corporate</Link>
+                      <li className=" hover:bg-primary hover:text-white ">
+                        <Link href="/about/corporate" className="block px-3 py-2">Corporate</Link>
                       </li>
                     </ul>
                   )}
@@ -167,7 +162,7 @@ const Header = () => {
                   {contactDropdown && (
                     <ul className="absolute w-[200px] left-0 pt-6 z-20  rounded shadow-lg">
                       <li
-                        className={`flex items-center relative px-3 py-2 ${getHeaderColor()} hover:bg-primary hover:text-white`}
+                        className={`flex items-center relative px-3 py-2 bg-white  hover:bg-primary hover:text-white`}
                         onMouseEnter={handleAreaHover}
                         onMouseLeave={handleAreaLeave}
                       >
@@ -188,7 +183,7 @@ const Header = () => {
                         </svg>
                         {areaDropdown && (
                           <ul
-                            className={`absolute left-full -top-2 mt-2 rounded lg:w-[200px] shadow-lg text-black ${getHeaderColor()}`}
+                            className={`absolute left-full -top-2 mt-2 rounded lg:w-[200px] shadow-lg text-black bg-white`}
                           >
                             <li className="px-3 py-2 hover:bg-primary hover:text-white">
                               Antihypertensives
@@ -268,7 +263,7 @@ const Header = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div
-            className={`lg:hidden flex items-center flex-col ${getHeaderColor()}`}
+            className={`lg:hidden flex items-center flex-col `}
           >
             <ul className="flex items-center w-full flex-col gap-4 pt-4 text-black text-base font-normal font-secondary leading-tight">
               <li>
@@ -306,7 +301,7 @@ const Header = () => {
                 {activeIndex === 0 && (
                   <div className="w-full">
                     <ul
-                      className={`w-full flex flex-col items-center justify-center  ${getHeaderColor()}`}
+                      className={`w-full flex flex-col items-center justify-center `}
                     >
                       <div className="w-full h-[0px] opacity-40  border-2 mt-2 border-[#0000004D] "></div>
 
@@ -367,7 +362,7 @@ const Header = () => {
                       <div className="w-full h-[0px] opacity-40  border-2 mt-2 border-[#0000004D] "></div>
 
                       <li
-                        className={`flex flex-col items-center justify-center  px-3 py-2 ${getHeaderColor()}`}
+                        className={`flex flex-col items-center justify-center  px-3 py-2 $`}
                         onMouseEnter={handleAreaHover}
                         onMouseLeave={handleAreaLeave}
                       >
@@ -390,7 +385,7 @@ const Header = () => {
                         </div>
                         {areaDropdown && (
                           <ul
-                            className={` mt-2 flex flex-col items-center justify-center  text-black ${getHeaderColor()}`}
+                            className={` mt-2 flex flex-col items-center justify-center  text-black `}
                           >
                             <li className="px-3 py-2" onClick={handleLinkClick}>
                               Antihypertensives
