@@ -6,6 +6,9 @@ import Partner3 from "@/public/images/partner3.svg";
 import Partner4 from "@/public/images/partner4.svg";
 import Partner5 from "@/public/images/partner5.svg";
 import Partner6 from "@/public/images/partner6.svg";
+import Partner7 from "@/public/images/partner7.svg";
+import Partner8 from "@/public/images/partner8.svg";
+import Partner9 from "@/public/images/partner9.svg";
 
 const Partners = () => {
   return (
@@ -16,7 +19,7 @@ const Partners = () => {
         </h2>
         <div className="mt-16 flex flex-wrap justify-center">
           <div className="w-[400px] h-[150px] flex justify-center items-center xl:border-r xl:border-[#c4c4c4]">
-            <Image src={Partner1} alt="Partners" />
+            <Image src={Partner1} alt="Partners" className="bg-transparent" />
           </div>
           <div className="w-[400px] h-[150px] flex justify-center items-center xl:border-r xl:border-[#c4c4c4]">
             <Image src={Partner2} alt="Partners" />
@@ -32,6 +35,15 @@ const Partners = () => {
           </div>
           <div className="w-[400px] h-[150px] flex justify-center items-center xl:border-t xl:border-[#c4c4c4]">
             <Image src={Partner6} alt="Partners" />
+          </div>
+          <div className="w-[400px] h-[150px] flex justify-center items-center xl:border-r xl:border-t xl:border-[#c4c4c4]">
+            <Image src={Partner7} alt="Partners" />
+          </div>
+          <div className="w-[400px] h-[150px] flex justify-center items-center xl:border-r xl:border-t xl:border-[#c4c4c4]">
+            <Image src={Partner8} alt="Partners" />
+          </div>
+          <div className="w-[400px] h-[150px] flex justify-center items-center xl:border-t xl:border-[#c4c4c4]">
+            <Image src={Partner9} alt="Partners" />
           </div>
           
         </div>
