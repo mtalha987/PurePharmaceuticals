@@ -64,8 +64,6 @@ const Header = () => {
       <div
         className={`pt-[20px] xl:px-[90px] lg:px-[40px] px-5 ${getHeaderColor()} `}
       >
-        {/* The rest of your header code here */}
-
         <div className="hidden 2xl:max-w-[1440px] 2xl:mx-auto lg:flex flex-wrap justify-between text-neutral-dark-gray text-[13px] font-primary ">
           <div className="leading-5 font-normal ">
             <span>Sample@gmail.com</span>
@@ -82,13 +80,13 @@ const Header = () => {
 
         <nav className="flex items-center justify-between 2xl:max-w-[1440px] 2xl:mx-auto  ">
           <div>
-            <Link href="/">
-              <Image src={Logo} alt="StomaFlex Logo" />
+            <Link href="/" className="xl::w-[222px]">
+              <Image src={Logo} alt="StomaFlex Logo" className="xl:w-[222px] lg:w-[200px]" />
             </Link>
           </div>
           <div className="hidden lg:flex items-center">
-            <div className="xl:mr-[140px] lg:mr-[40px] sm:mr-10 mr-4 text-neutral-gray text-base font-normal font-primary leading-normal">
-              <ul className="flex gap-9">
+            <div className="xl:mr-[62px] 2xl:mr-[138px] lg:mr-[40px] sm:mr-10 mr-4 text-neutral-gray text-base font-normal font-arial leading-normal">
+              <ul className="flex 2xl:gap-9 xl:gap-6 lg:gap-4">
                 <li>
                   <Link
                     href="/"
@@ -114,7 +112,7 @@ const Header = () => {
                   >
                     About Us{" "}
                     <svg
-                      className="h-5 w-5 ml-2"
+                      className="h-5 w-5 ml-[7px]"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -150,9 +148,9 @@ const Header = () => {
                   className="relative"
                 >
                   <Link href="/product" className="flex items-center">
-                    Products{" "}
+                    Product
                     <svg
-                      className="h-5 w-5 ml-2"
+                      className="h-5 w-5 ml-[7px]"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -251,7 +249,7 @@ const Header = () => {
                 </li>
               </ul>
             </div>
-            <div className="px-[25px] py-3 text-primary justify-center items-center gap-4 inline-flex border border-primary rounded-lg text-base font-medium font-primary">
+            <div className="px-[20px] py-3 text-primary justify-center items-center gap-3 inline-flex border border-primary rounded-lg text-base font-medium font-primary">
               Shop Now <Image src={RightArrow} alt="Right Arrow" />
             </div>
           </div>

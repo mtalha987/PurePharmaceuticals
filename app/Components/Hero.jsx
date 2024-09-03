@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row 2xl:max-w-[1440px] 2xl:mx-auto">
           <div className="md:w-[55%] mt-1">
             <h2 className="text-[#0b3931] xl:text-[52px] text-5xl xs:text-4xl font-normal font-arial leading-[54.79px] xl:mt-7 ">Welcome to <br className="hidden xl:block"/> Pure Pharmaceuticals</h2>
-            <p className="text-[#2f2f2f] text-base font-normal font-secondary leading-normal mt-5 xl:w-[90%]">
+            <p className="text-[#2f2f2f] text-base font-normal font-secondary leading-normal mt-5 xl:w-[90%] lg:w-[80%]">
               Welcome to Pure Pharmaceuticals, your trusted source for
               high-quality pharmaceutical products in Kizad, Abu Dhabi. We are
               committed to excellence and customer satisfaction, ensuring all

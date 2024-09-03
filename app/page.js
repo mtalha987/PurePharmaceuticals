@@ -16,7 +16,6 @@ export default function Home() {
       <Verticals/>
       <About/>
       <ProductOverview/>
-      <Products/>
       <PureCommitted/>
       <WhyPure/>
       <Partners/>

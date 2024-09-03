@@ -18,7 +18,7 @@ const WhyPure = () => {
           <button className="h-[37px] px-[15px] py-2.5 rounded-[71px] border border-white justify-center items-center gap-2.5 inline-flex text-white text-base font-normal font-arial leading-[16.86px]">
             Why Pure Pharmaceuticals
           </button>
-          <h2 className="text-white xl:w-[65%] 2xl:w-[90%] sm:w-[90%] text-[42px] font-normal font-arial leading-[44.25px] mt-4">
+          <h2 className="text-white xl:w-[85%] 2xl:w-[90%] sm:w-[90%] text-[42px] font-normal font-arial leading-[44.25px] mt-4">
             Your Reliable Partner in Exceptional Healthcare
           </h2>
           <div className="mt-11 flex flex-col gap-6 mb-16">
