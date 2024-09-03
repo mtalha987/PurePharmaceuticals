@@ -55,8 +55,23 @@ const page = () => {
                   <Image src={Newss} alt='banner' className='w-full h-full'  width={280} height={440}/>
               </div>
               <div>
-                    <h2 className='text-xl font-normal font-arial leading-normal text-[#151515] mt-5 w-[72%]'>QLife Pharma's CEO, Dr. Ahmed, Meets with Prime Minister of Malaysia</h2>
-                    <p className='mt-3 text-[13px] font-normal font-secondary leading-none text-[#222222]'>QLife Pharma's CEO, Dr. Ahmed, Meets with Prime Minister of Malaysia</p>
+                    <h2 className='text-xl font-normal font-arial leading-normal text-[#151515] mt-5 w-[72%]'>Akses Swiss Scientific office</h2>
+                    <p className='mt-3 text-[13px] font-normal font-secondary leading-none text-[#222222]'>Purepharma's CEO, Mr. Musthafa, Meets with Manas Varalwar in Abudhabi</p>
+                    <div className='mt-9'>
+                      <span className='underline text-[13px] font-normal font-secondary leading-none text-[#222222]'>Read More</span>
+                    </div>
+              </div>
+
+            </div>
+          </div>
+          <div className='mt-10'>
+            <div className='border border-[#D9D9D9] py-5 px-4 flex gap-10'>
+              <div>
+                  <Image src={Newss} alt='banner' className='w-full h-full'  width={280} height={440}/>
+              </div>
+              <div>
+                    <h2 className='text-xl font-normal font-arial leading-normal text-[#151515] mt-5 w-[72%]'>Dr Reddy’s Laboratories FZ LLC</h2>
+                    <p className='mt-3 text-[13px] font-normal font-secondary leading-none text-[#222222]'>Purepharma's CEO, Mr. Musthafa, Meets with Manas Varalwar in Abudhabi</p>
                     <div className='mt-9'>
                       <span className='underline text-[13px] font-normal font-secondary leading-none text-[#222222]'>Read More</span>
                     </div>
