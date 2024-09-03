@@ -416,6 +416,19 @@ const Header = () => {
               <div className="w-full h-[0px] opacity-40 border border-[#0000004D] "></div>
 
               <li className="relative">
+                <Link href="/news" onClick={handleLinkClick}>
+                  News & Events
+                </Link>
+              </li>
+              <div className="w-full h-[0px] opacity-40 border border-[#0000004D] "></div>
+              <li className="relative">
+                <Link href="/careers" onClick={handleLinkClick}>
+                  Careers
+                </Link>
+              </li>
+              <div className="w-full h-[0px] opacity-40 border border-[#0000004D] "></div>
+
+              <li className="relative">
                 <Link href="/contact" onClick={handleLinkClick}>
                   Contact Us
                 </Link>
