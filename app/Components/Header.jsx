@@ -7,23 +7,35 @@ import MenuClose from "@/public/images/menuClose.svg";
 import RightArrow from "@/public/images/rightArrowGreen.svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FaFacebookF } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaYoutube } from "react-icons/fa";
+import SocialIcons from "./SocialIcons";
 
 const Header = () => {
   const pathname = usePathname();
-
- 
 
   const [isOpen, setIsOpen] = useState(false);
   const [aboutDropdown, setAboutDropdown] = useState(false);
   const [contactDropdown, setContactDropdown] = useState(false);
   const [areaDropdown, setAreaDropdown] = useState(false);
+  const [isAnimatingOut, setIsAnimatingOut] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    if (isOpen) {
+      setIsAnimatingOut(true); // Start the closing animation
+      setTimeout(() => {
+        setIsAnimatingOut(false);
+        setIsOpen(false); // Close the menu after the animation completes
+      }, 400); // Duration of the moveOut animation (in milliseconds)
+    } else {
+      setIsOpen(true); // Open the menu
+    }
   };
 
   const handleLinkClick = () => {
-    setIsOpen(false); // Close the mobile menu
+    toggleMenu();
   };
 
   const handleAboutHover = () => {
@@ -58,19 +70,18 @@ const Header = () => {
 
   return (
     <>
-      <div
-        className={`pt-[20px] xl:px-[90px] lg:px-[40px] px-5 `}
-      >
+      <div className={`pt-[20px] xl:px-[90px] lg:px-[40px] px-5 `}>
         <div className="hidden 2xl:max-w-[1440px] 2xl:mx-auto lg:flex flex-wrap justify-between text-neutral-dark-gray text-[13px] font-primary ">
           <div className="leading-5 font-normal ">
             <span>Sample@gmail.com</span>
             <span> / </span>
             <span>+04 89 76 4576</span>
           </div>
-          <div>
-            <span className="font-normal leading-tight uppercase">
-              Open from 9am to 5pm - Closed on Weekends
-            </span>
+          <div className="flex gap-2 ">
+            <SocialIcons icon={<FaFacebookF />} />
+            <SocialIcons icon={<FaTwitter />} />
+            <SocialIcons icon={<AiFillInstagram />} />
+            <SocialIcons icon={<FaYoutube />} />
           </div>
         </div>
         <div className="w-full 2xl:max-w-[1440px] 2xl:mx-auto h-[0px] opacity-40 border border-neutral-gray mt-2 mb-5 hidden lg:block"></div>
@@ -78,7 +89,11 @@ const Header = () => {
         <nav className="flex items-center justify-between 2xl:max-w-[1440px] 2xl:mx-auto  ">
           <div>
             <Link href="/" className="xl::w-[222px]">
-              <Image src={Logo} alt="StomaFlex Logo" className="xl:w-[222px] lg:w-[200px]" />
+              <Image
+                src={Logo}
+                alt="StomaFlex Logo"
+                className="xl:w-[222px] lg:w-[200px]"
+              />
             </Link>
           </div>
           <div className="hidden lg:flex items-center">
@@ -127,12 +142,18 @@ const Header = () => {
                     <ul
                       className={`absolute w-[160px] left-0 pt-6 z-20  rounded shadow-lg bg-white `}
                     >
-                     
                       <li className=" hover:bg-primary hover:text-white ">
-                        <Link href="/about/company" className="block px-3 py-2">Company Profile</Link>
+                        <Link href="/about/company" className="block px-3 py-2">
+                          Company Profile
+                        </Link>
                       </li>
                       <li className=" hover:bg-primary hover:text-white ">
-                        <Link href="/about/corporate" className="block px-3 py-2">Corporate</Link>
+                        <Link
+                          href="/about/corporate"
+                          className="block px-3 py-2"
+                        >
+                          Corporate
+                        </Link>
                       </li>
                     </ul>
                   )}
@@ -263,7 +284,9 @@ const Header = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div
-            className={`lg:hidden flex items-center flex-col `}
+            className={`lg:hidden absolute left-0 w-full z-20 bg-white flex items-center flex-col   transition-all duration-700 ease-in-out  ${
+              isAnimatingOut ? "animationMoveOut " : "animationMove h-[86vh]"
+            }`}
           >
             <ul className="flex items-center w-full flex-col gap-4 pt-4 text-black text-base font-normal font-secondary leading-tight">
               <li>
@@ -307,16 +330,15 @@ const Header = () => {
 
                       <li className="px-3 py-2 hover:bg-primary hover:text-white ">
                         <Link href="/about/company" onClick={handleLinkClick}>
-                        Company Profile
+                          Company Profile
                         </Link>
                       </li>
                       <li className="px-3 py-2 hover:bg-primary hover:text-white ">
                         <Link href="/about/corporate" onClick={handleLinkClick}>
-                        Corporate
+                          Corporate
                         </Link>
                       </li>
 
-                   
                       <div className="w-full h-[0px] opacity-40  border-2 mt-2 border-[#0000004D] "></div>
                     </ul>
                   </div>
@@ -423,6 +445,12 @@ const Header = () => {
             </ul>
             <div className="px-[25px] mt-12 py-3 bg-primary justify-center items-center gap-4 inline-flex text-white text-base font-medium font-primary">
               Get this from Jurhy <Image src={RightArrow} alt="Right Arrow" />
+            </div>
+            <div className="flex gap-2 mt-10 mb-24">
+              <SocialIcons icon={<FaFacebookF />} />
+              <SocialIcons icon={<FaTwitter />} />
+              <SocialIcons icon={<AiFillInstagram />} />
+              <SocialIcons icon={<FaYoutube />} />
             </div>
           </div>
         )}
